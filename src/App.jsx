@@ -17,7 +17,7 @@ export default function App(){
   }else{const{data,error}=await supabase.auth.signInWithPassword({email,password});if(error)setMessage(error.message);else if(data.user&&!data.user.email_confirmed_at)setMessage("Please verify your email address before using AMORA.");else setMessage("Signed in.");}
   setBusy(false)
  };
- const signout=async()=>{await supabase.auth.signOut();setMessage("Signed out.");setActive("Home")};
+ const signout=async()=>{const{error}=await supabase.auth.signOut();setMessage(error?.message||"Signed out.");if(!error)setActive("Home")};
  if(recovery)return <PasswordRecovery onDone={()=>setRecovery(false)}/>;
  if(demoMode)return <AppShell session={{user:{id:"demo-user",email:"demo@amora.example"}}} profile={{display_name:"AMORA Demo",role:"premium",verification_status:"amora_verified"}} isAdmin={false} active={active} setActive={setActive} signout={()=>{setDemoMode(false);setActive("Home")}} mobileOpen={mobileOpen} setMobileOpen={setMobileOpen} demoMode/>;
  if(session&&mfaRequired)return <MFAChallenge onVerified={()=>setMfaRequired(false)}/>;if(session)return <AppShell session={session} profile={profile} isAdmin={isAdmin} active={active} setActive={setActive} signout={signout} mobileOpen={mobileOpen} setMobileOpen={setMobileOpen}/>;
