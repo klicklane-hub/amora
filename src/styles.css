@@ -277,3 +277,5 @@ button:disabled{opacity:.6;cursor:wait}
 @media(max-width:600px){.avatar-editor{align-items:flex-start}.avatar-preview{width:78px;height:78px;font-size:25px}}
 
 .avatar{overflow:hidden}.avatar img{width:100%;height:100%;display:block;object-fit:cover;border-radius:inherit}
+
+.avatar-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}.avatar-remove{font-size:11px}.avatar-remove:disabled{opacity:.55;cursor:not-allowed}
