@@ -24,7 +24,7 @@ export default function App(){
  return <Landing mode={mode} setMode={setMode} demo={setDemoMode} email={email} setEmail={setEmail} password={password} setPassword={setPassword} name={name} setName={setName} dob={dob} setDob={setDob} ageConfirmed={ageConfirmed} setAgeConfirmed={setAgeConfirmed} terms={terms} setTerms={setTerms} busy={busy} message={message} setMessage={setMessage} submit={submit}/>;
 }
 
-function AppShell({session,profile,isAdmin,active,setActive,signout,mobileOpen,setMobileOpen}){
+function AppShell({session,profile,isAdmin,active,setActive,signout,mobileOpen,setMobileOpen,demoMode=false}){
  const isPremium=profile?.role==="premium";
  const nav=isAdmin?[...baseNav,...premiumNav,"Admin"]:isPremium?[...baseNav,...premiumNav]:baseNav;
  const initials=(profile?.display_name||session.user.email||"A").slice(0,1).toUpperCase();
