@@ -56,6 +56,9 @@ hero p,p{color:var(--amora-text-soft);line-height:1.7}
 .big{padding:14px 22px}
 .ghost{border:1px solid var(--amora-border);background:rgba(255,255,255,.035)}
 label{color:var(--amora-muted);font-size:12px}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:saturate(1.05) contrast(1.04)}
+.hero-photo-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,12,.08),rgba(8,8,12,.22) 42%,rgba(8,8,12,.88) 100%),linear-gradient(135deg,rgba(167,25,75,.24),rgba(232,199,122,.05));z-index:1}
+.visual .glow{z-index:2}.visual .room{z-index:3}
 .visual{
   min-height:480px;position:relative;overflow:hidden;border:1px solid var(--amora-border);
   border-radius:34px;
