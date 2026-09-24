@@ -2,7 +2,7 @@ import{StrictMode}from"react";import{createRoot}from"react-dom/client";import{cr
 
 const supabaseUrl=import.meta.env.VITE_SUPABASE_URL;
 const supabasePublishableKey=import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+if(!supabaseUrl||!supabasePublishableKey)console.warn("AMORA: Supabase environment variables are not configured.");
 
-export const supabase=createClient(supabaseUrl,supabasePublishableKey);
-
+export const supabase=createClient(supabaseUrl||"https://placeholder.invalid",supabasePublishableKey||"placeholder");
 createRoot(document.getElementById("root")).render(<StrictMode><App/></StrictMode>);
