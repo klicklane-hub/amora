@@ -275,3 +275,5 @@ button:disabled{opacity:.6;cursor:wait}
 .avatar-upload-button:hover{border-color:rgba(179,18,61,.55)}
 .avatar-upload-button input{display:none}
 @media(max-width:600px){.avatar-editor{align-items:flex-start}.avatar-preview{width:78px;height:78px;font-size:25px}}
+
+.avatar{overflow:hidden}.avatar img{width:100%;height:100%;display:block;object-fit:cover;border-radius:inherit}
