@@ -30,11 +30,11 @@ function AppShell({session,profile,isAdmin,active,setActive,signout,mobileOpen,s
  const initials=(profile?.display_name||session.user.email||"A").slice(0,1).toUpperCase();
  return <div className="app-shell">
   <aside className={mobileOpen?"sidebar open":"sidebar"}><div className="side-top"><a className="brand" href="/"><b className="brand-mark"><img src="/amora-mark.svg" alt="" /></b><span>AMORA</span></a><button className="mobile-close" onClick={()=>setMobileOpen(false)}>×</button></div>
-   <div className="account-mini"><span className="avatar">{initials}</span><div><strong>{profile?.display_name||"AMORA member"}</strong><small>{isPremium?"Premium":"Member"}</small></div></div>
+   <div className="account-mini"><span className="avatar">{profile?.avatar_url?<img src={profile.avatar_url} alt="" />:initials}</span><div><strong>{profile?.display_name||"AMORA member"}</strong><small>{isPremium?"Premium":"Member"}</small></div></div>
    <nav className="app-nav">{nav.map(item=><button key={item} className={active===item?"active":""} onClick={()=>{setActive(item);setMobileOpen(false)}}><span className="nav-dot"/>{item}{["Notifications","Messages"].includes(item)&&!demoMode&&<span className="nav-count">{item==="Notifications"?<NotificationCount session={session}/>:item==="Messages"?<MessageCount session={session}/>:null}</span>}</button>)}</nav>
    <button className="signout" onClick={signout}>Sign out</button>
   </aside>
-  <div className="app-main"><header className="app-header"><button className="menu-button" onClick={()=>setMobileOpen(true)}>☰</button><div><small>AMORA / {active.toUpperCase()}</small><h1>{active}</h1></div><div className="header-actions"><button aria-label="Notifications" onClick={()=>setActive("Notifications")}>♡</button><span className="avatar">{initials}</span></div></header>
+  <div className="app-main"><header className="app-header"><button className="menu-button" onClick={()=>setMobileOpen(true)}>☰</button><div><small>AMORA / {active.toUpperCase()}</small><h1>{active}</h1></div><div className="header-actions"><button aria-label="Notifications" onClick={()=>setActive("Notifications")}>♡</button><span className="avatar">{profile?.avatar_url?<img src={profile.avatar_url} alt="" />:initials}</span></div></header>
    <main className="app-content"><Screen active={active} profile={profile} session={session} isPremium={isPremium} isAdmin={isAdmin} demoMode={demoMode}/></main>
   </div>
  </div>
