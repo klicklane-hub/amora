@@ -14,7 +14,7 @@ export default function App(){
   if(mode==="signup"){if(!ageConfirmed||!terms){setMessage("You must confirm that you are 18+ and accept AMORA's terms and privacy requirements.");setBusy(false);return}
    const{error}=await supabase.auth.signUp({email,password,options:{data:{display_name:name,date_of_birth:dob,is_age_confirmed:true,terms_accepted:true,privacy_accepted:true,terms_version:"1.0",privacy_version:"1.0",community_rules_version:"1.0",age_safety_version:"1.0"}}});
    setMessage(error?error.message:"Account created. Check your email to verify your address before signing in.");if(!error)setMode("signin");
-  }else{const{data,error}=await supabase.auth.signInWithPassword({email,password});if(error)setMessage(error.message);else if(data.user&&!data.user.email_confirmed_at)setMessage("Please verify your email address before using AMORA.");else setMessage("Signed in.");}
+  }else{const{data,error}=await supabase.auth.signInWithPassword({email,password});if(error){setMessage(error.message)}else if(data.user&&!data.user.email_confirmed_at){await supabase.auth.signOut({scope:"global"});setMessage("Please verify your email address before using AMORA.")}else setMessage("Signed in.");}
   setBusy(false)
  };
  const signout=async()=>{const{error}=await supabase.auth.signOut();setMessage(error?.message||"Signed out.");if(!error)setActive("Home")};
