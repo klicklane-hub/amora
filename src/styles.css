@@ -233,3 +233,7 @@ button:disabled{opacity:.6;cursor:wait}
 
 /* Notifications preview */
 .notification-filters{display:flex;gap:8px;margin-bottom:14px}.notification-filters span{padding:7px 11px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:.78rem}.notification-filters span.active{border-color:var(--ruby);background:rgba(179,18,61,.1);color:var(--text)}.notification-security-note{max-width:850px;margin-top:18px}.notification-toolbar button{white-space:nowrap}@media(max-width:650px){.notification-toolbar{align-items:flex-start;flex-direction:column}.notification-toolbar button{width:100%}}
+
+
+/* Calls preview */
+.calls-preview-note{max-width:850px;margin-top:18px}.calls-preview-history{display:grid;gap:10px}
