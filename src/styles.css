@@ -237,3 +237,6 @@ button:disabled{opacity:.6;cursor:wait}
 
 /* Calls preview */
 .calls-preview-note{max-width:850px;margin-top:18px}.calls-preview-history{display:grid;gap:10px}
+
+.subscription-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.subscription-actions button{min-width:150px}
+@media(max-width:600px){.subscription-actions{flex-direction:column}.subscription-actions button{width:100%}}
