@@ -1,15 +1,21 @@
 import { supabase } from "./main";
 
-const iceServers = (() => {
+const fallbackIceServers = [{ urls: ["stun:stun.cloudflare.com:3478"] }];
+
+async function getIceServers() {
+  try {
+    const { data, error } = await supabase.functions.invoke("webrtc-ice", { body: {} });
+    if (!error && Array.isArray(data?.iceServers) && data.iceServers.length) return data.iceServers;
+  } catch {}
   try {
     const raw = import.meta.env.VITE_AMORA_ICE_SERVERS;
-    if (!raw) return [];
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed : [];
-  } catch {
-    return [];
-  }
-})();
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed) && parsed.length) return parsed;
+    }
+  } catch {}
+  return fallbackIceServers;
+}
 
 export function createMediaCall({ callId, isCaller, callType, onRemoteStream, onState, onError }) {
   let channel;
