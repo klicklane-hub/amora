@@ -173,3 +173,16 @@ button:disabled{opacity:.6;cursor:wait}
 
 
 .notification-toolbar{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:20px}.notification-toolbar h3{margin:6px 0 0;font-size:24px}.notification-list{display:grid;gap:8px;max-width:850px}.notification-row{width:100%;display:grid;grid-template-columns:42px 1fr;gap:13px;text-align:left;border:1px solid var(--amora-border);border-radius:16px;background:rgba(255,255,255,.025);padding:15px;color:var(--amora-text)}.notification-row.unread{border-color:var(--amora-border-ruby);background:rgba(179,18,61,.07)}.notification-row:hover{background:rgba(255,255,255,.045)}.notification-icon{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(179,18,61,.18);color:var(--amora-rose);font-weight:700}.notification-row strong,.notification-row small,.notification-row em{display:block}.notification-row small{margin-top:4px;color:var(--amora-text-soft);font-size:12px;line-height:1.45}.notification-row em{margin-top:6px;color:var(--amora-muted);font-size:10px;font-style:normal}
+
+.room-page,.invitations-page{display:grid;gap:18px}
+.room-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.room-card,.settings-card,.invitation-row{background:var(--amora-surface);border:1px solid var(--amora-border);border-radius:18px;padding:22px}
+.room-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.room-badge{display:inline-flex;padding:6px 9px;border-radius:999px;background:rgba(210,31,80,.12);border:1px solid var(--amora-border-ruby);color:var(--amora-ruby-soft);font-size:11px;font-weight:800;letter-spacing:.08em}
+.room-live{color:var(--amora-success);font-size:12px;text-transform:capitalize}.room-offline{color:var(--amora-muted);font-size:12px;text-transform:capitalize}
+.room-card h3,.invitation-row h3{margin:0 0 8px;font-size:20px}.room-card p,.invitation-row p{color:var(--amora-text-soft);line-height:1.6}
+.room-capabilities{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.room-capabilities span{padding:7px 10px;border-radius:9px;background:var(--amora-surface-2);color:var(--amora-text-soft);font-size:12px}
+.room-card small{display:block;color:var(--amora-muted);line-height:1.5}.room-actions{margin-top:18px}
+.settings-card{max-width:760px;display:grid;gap:16px}.settings-card textarea{min-height:120px;resize:vertical}.setting-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.setting-toggle{display:flex;align-items:center;gap:10px;padding:13px 14px;background:var(--amora-surface-2);border:1px solid var(--amora-border);border-radius:12px;color:var(--amora-text-soft)}.setting-toggle input{accent-color:var(--amora-ruby-bright)}
+.invitation-list{display:grid;gap:12px}.invitation-row{display:flex;justify-content:space-between;gap:20px;align-items:center}.invitation-row small{color:var(--amora-muted)}.invitation-actions{display:flex;gap:8px;flex-wrap:wrap}
+@media(max-width:800px){.room-grid,.setting-grid{grid-template-columns:1fr}.invitation-row{flex-direction:column;align-items:flex-start}.invitation-actions{width:100%}}
