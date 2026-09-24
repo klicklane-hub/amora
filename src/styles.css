@@ -1,23 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@500;600&display=swap");
 
 :root{
-  --amora-bg:#09090b;
-  --amora-bg-soft:#0f0f12;
-  --amora-surface:#151519;
-  --amora-surface-2:#1b1b21;
-  --amora-ruby:#b3123d;
-  --amora-ruby-bright:#d21f50;
-  --amora-ruby-soft:#e45a7b;
-  --amora-rose:#f0a0b4;
+  --amora-bg:#08080c;
+  --amora-bg-soft:#111016;
+  --amora-surface:#18141a;
+  --amora-surface-2:#211821;
+  --amora-ruby:#a7194b;
+  --amora-ruby-bright:#e23b68;
+  --amora-ruby-soft:#ff7897;
+  --amora-rose:#ffc0cf;
   --amora-text:#f7f2f4;
-  --amora-text-soft:#d2c7cb;
-  --amora-muted:#968b91;
+  --amora-text-soft:#e1d4d9;
+  --amora-muted:#aa9ba2;
   --amora-border:rgba(255,255,255,.10);
   --amora-border-ruby:rgba(210,31,80,.34);
   --amora-success:#65c995;
   --amora-warning:#e4b35d;
   --amora-error:#f06a73;
-  --amora-premium:#d7a84d;
+  --amora-premium:#e8c77a;
   font-family:"DM Sans",system-ui,sans-serif;
   color:var(--amora-text);
   background:var(--amora-bg);
@@ -29,8 +29,8 @@ body{
   margin:0;
   min-width:320px;
   background:
-    radial-gradient(circle at 78% 14%,rgba(179,18,61,.18),transparent 30%),
-    radial-gradient(circle at 12% 72%,rgba(110,20,48,.12),transparent 28%),
+    radial-gradient(circle at 78% 14%,rgba(226,59,104,.25),transparent 30%),
+    radial-gradient(circle at 12% 72%,rgba(232,199,122,.07),transparent 28%),
     var(--amora-bg)
 }
 button{font:inherit;cursor:pointer}
@@ -38,11 +38,8 @@ button{font:inherit;cursor:pointer}
 header,main,footer{width:min(1180px,calc(100% - 40px));margin:auto}
 header{padding:24px 0;display:flex;justify-content:space-between;align-items:center}
 .brand{display:flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-weight:700;letter-spacing:.14em}
-.brand b{
-  width:36px;height:36px;border-radius:50%;display:grid;place-items:center;
-  background:var(--amora-ruby);color:#fff;font:600 21px "Playfair Display",serif;
-  box-shadow:0 0 28px rgba(179,18,61,.28)
-}
+.brand b{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:transparent;color:#fff;overflow:hidden;box-shadow:0 0 34px rgba(226,59,104,.28)}
+.brand-mark img{width:100%;height:100%;display:block}
 nav{display:flex;gap:12px}
 nav button,.ghost{border:0;background:transparent;color:var(--amora-text);padding:11px 15px;border-radius:999px}
 .primary{
@@ -62,11 +59,11 @@ label{color:var(--amora-muted);font-size:12px}
 .visual{
   min-height:480px;position:relative;overflow:hidden;border:1px solid var(--amora-border);
   border-radius:34px;
-  background:linear-gradient(145deg,rgba(179,18,61,.18),rgba(255,255,255,.025))
+  background:linear-gradient(145deg,rgba(226,59,104,.22),rgba(232,199,122,.06) 48%,rgba(255,255,255,.025))
 }
 .glow{position:absolute;border-radius:50%;filter:blur(2px)}
-.one{width:330px;height:330px;right:-100px;top:40px;background:rgba(210,31,80,.34)}
-.two{width:250px;height:250px;left:-90px;bottom:-40px;background:rgba(110,20,48,.30)}
+.one{width:330px;height:330px;right:-100px;top:40px;background:rgba(226,59,104,.40)}
+.two{width:250px;height:250px;left:-90px;bottom:-40px;background:rgba(167,25,75,.32)}
 .room{
   position:absolute;left:28px;right:28px;bottom:28px;padding:22px;border-radius:24px;
   background:rgba(9,9,11,.82);border:1px solid var(--amora-border);
