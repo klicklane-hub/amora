@@ -1,6 +1,6 @@
-# AMORA
+# MIAMORA
 
-AMORA — an adult-only social and dating platform built around private connections, invitations, conversations, and rooms.
+MIAMORA — an adult-only social and dating platform built around private connections, invitations, conversations, and rooms.
 
 ## Foundation
 
@@ -14,6 +14,6 @@ AMORA — an adult-only social and dating platform built around private connecti
 - Verification, blocking, reporting, and moderation
 - Privacy-first controls
 
-AMORA does not facilitate, arrange, advertise, or sell sexual services. Safety, consent, privacy, and moderation are core product requirements.
+MIAMORA does not facilitate, arrange, advertise, or sell sexual services. Safety, consent, privacy, and moderation are core product requirements.
 
 This repository is intentionally separate from other projects.
