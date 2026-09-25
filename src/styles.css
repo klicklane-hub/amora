@@ -281,4 +281,4 @@ button:disabled{opacity:.6;cursor:wait}
 
 .avatar-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}.avatar-remove{font-size:11px}.avatar-remove:disabled{opacity:.55;cursor:not-allowed}
 
-@media(max-width:700px){.app-header-title{gap:10px}.miamora-header-lockup{display:none}.app-header-section{font-size:9px}.miamora-logo{width:116px}}
+@media(max-width:700px){.app-header-title{gap:10px}.miamora-header-logo{display:none}.app-header-section{font-size:9px}.miamora-logo{width:116px}}
